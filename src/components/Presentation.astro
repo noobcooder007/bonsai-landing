@@ -1,0 +1,58 @@
+---
+import CustomIcon from '@components/CustomIcon.astro';
+---
+
+<section
+  class='flex flex-col items-center justify-center text-center p-4 gap-16 mt-8'
+>
+  <div class='flex flex-col items-center justify-center gap-16'>
+    <span
+      class='flex flex-row items-center gap-2 rounded-full border-green-700 border-1 px-4 py-1'
+    >
+      <CustomIcon name='diamond_shine' size='size-6' color='text-green-800' />
+      <p class='text-sm text-green-700 font-semibold'>
+        Empresa Digital Innovadora
+      </p>
+    </span>
+    <h1 class='text-4xl font-bold'>
+      Transformamos <span class='text-green-800'>Ideas en Software</span>
+    </h1>
+    <h2 class='text-2xl font-medium text-gray-700'>
+      Somos Bonsai Software, una empresa digital especializada en crear
+      soluciones tecnológicas personalizadas y desarrollar proyectos desde cero.
+    </h2>
+    <div class='flex flex-row gap-8'>
+      <a
+        href='#services'
+        class='flex flex-row bg-green-700 rounded-full px-12 py-1 text-white text-xl font-semibold justify-center items-center gap-2'
+        >Ver Servicios <CustomIcon
+          name='arrow_forward'
+          size='size-6'
+          color='text-white'
+        />
+      </a>
+      <a
+        href='#contact'
+        class='border-green-700 text-green-700 border-2 rounded-full px-12 py-1 font-semibold text-xl'
+        >Contactar Ahora</a
+      >
+    </div>
+  </div>
+  <div class='flex flex-row justify-around gap-4 w-full'>
+    <span class='flex flex-col justify-center items-center gap-2'>
+      <CustomIcon name='bolt' size='size-8' color='text-green-700' />
+      <p class='text-xl text-green-700 font-semibold'>100%</p>
+      <p class='text-lg'>Digital</p>
+    </span>
+    <span class='flex flex-col justify-center items-center gap-2'>
+      <CustomIcon name='star_shine' size='size-8' color='text-green-700' />
+      <CustomIcon name='all' size='size-10' color='text-green-700' />
+      <p class='text-lg'>Posibilidades</p>
+    </span>
+    <span class='flex flex-col justify-center items-center gap-2'>
+      <CustomIcon name='support' size='size-8' color='text-green-700' />
+      <p class='text-xl text-green-700 font-semibold'>24 / 7</p>
+      <p class='text-lg'>Soporte</p>
+    </span>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  name: string;
+  size: string;
+  color: string;
+}
+
+const { name, color, size } = Astro.props;
+---
+
+<Icon name={name} class:list={[size, color]} />

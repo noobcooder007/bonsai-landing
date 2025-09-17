@@ -1,0 +1,74 @@
+---
+import Service from './Service.astro';
+
+interface Service {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+const services: Service[] = [
+  {
+    icon: 'code',
+    title: 'Desarrollo de Software Personalizado',
+    description:
+      'Creamos aplicaciones unicas adaptadas a las necesidades especificas de tu negocio.',
+  },
+  {
+    icon: 'web',
+    title: 'Aplicaciones Web',
+    description:
+      'Desarrollamos plataformas web modernas, responsivas y optimizadas para el rendimiento.',
+  },
+  {
+    icon: 'mobile',
+    title: 'Apps Moviles',
+    description:
+      'Aplicaciones nativas e híbridas para iOS y Android con experiencias excepcionales.',
+  },
+  {
+    icon: 'database',
+    title: 'Sistemas de Gestión',
+    description:
+      'Soluciones completas para la gestión empresarial, CRM, ERP y bases de datos.',
+  },
+  {
+    icon: 'automation',
+    title: 'Automatización',
+    description:
+      'Automatizamos procesos empresariales para aumentar la eficiencia y productividad.',
+  },
+  {
+    icon: 'shield',
+    title: 'Consultoria Tecnológica',
+    description:
+      'Asesoramiento experto en tecnología para optimizar tu infraestructura digital.',
+  },
+];
+---
+
+<section
+  id='services'
+  class='flex flex-col items-center justify-center text-center p-4 gap-4 mt-24'
+>
+  <h1 class='text-4xl font-bold text-center mb-4'>
+    Nuestros <span class='text-green-700'>Servicios</span>
+  </h1>
+  <h2 class='text-2xl font-medium text-gray-700 text-center mb-4'>
+    Ofrecemos soluciones tecnológicas completas para impulsar tu negocio hacia
+    el futuro digital
+  </h2>
+  <div class='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
+    {
+      services.map((service) => {
+        return (
+          <Service
+            icon={service.icon}
+            title={service.title}
+            description={service.description}
+          />
+        );
+      })
+    }
+  </div>
+</section>
