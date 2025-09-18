@@ -6,15 +6,22 @@ import About from '@components/About.astro';
 import Services from '@components/Services.astro';
 import Footer from '@components/Footer.astro';
 import Contact from '@components/Contact.astro';
+
+const title = 'Bonsai Software | Inicio';
+const description = 'Pagina oficial de Bonsai Software';
+const keywords = 'bonsai,software,desarrollo,android,kotlin,web,crm,aplicaciones';
 ---
 
 <html lang='en'>
   <head>
     <meta charset='utf-8' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <link rel='icon' type='image/jpeg' href='/logo.jpeg' />
     <meta name='viewport' content='width=device-width' />
     <meta name='generator' content={Astro.generator} />
-    <title>Inicio</title>
+    <title>Bonsai Software | Inicio</title>
+    <meta name='title' content={title} />
+    <meta name='description' content={description} />
+    <meta name='keywords' content={keywords} />
   </head>
   <body>
     <main class='p-8 bg-gray-100'>
