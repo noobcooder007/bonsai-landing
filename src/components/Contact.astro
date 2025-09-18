@@ -148,15 +148,20 @@ const contactItems: ContactItem[] = [
   </div>
 </section>
 <script>
-  import {neon} from '@netlify/neon';
   const formButton = document.querySelector('#contact form button');
-  formButton?.addEventListener('click', async(event) => {
+  formButton?.addEventListener('click', async (event) => {
     event.preventDefault();
-    const sql = neon()
-    const name = (document.querySelector('input[name="name"]') as HTMLInputElement).value;
-    const email = (document.querySelector('input[name="email"]') as HTMLInputElement).value;
-    const company = (document.querySelector('input[name="company"]') as HTMLInputElement).value;
-    const message = (document.querySelector('textarea[name="message"]') as HTMLInputElement).value;
-    await sql`INSERT INTO clients (name, email, company, message) VALUES (${name}, ${email}, ${company}, ${message})`;
+    const name = (
+      document.querySelector('input[name="name"]') as HTMLInputElement
+    ).value;
+    const email = (
+      document.querySelector('input[name="email"]') as HTMLInputElement
+    ).value;
+    const company = (
+      document.querySelector('input[name="company"]') as HTMLInputElement
+    ).value;
+    const message = (
+      document.querySelector('textarea[name="message"]') as HTMLInputElement
+    ).value;
   });
 </script>
