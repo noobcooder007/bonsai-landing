@@ -141,9 +141,22 @@ const contactItems: ContactItem[] = [
       </p>
       <a
         href='#contact'
-        class='flex flex-row items-center justify-center gap-2 w-1/3 h-8 rounded-full bg-green-700 text-white'
+        class='flex flex-row items-center justify-center gap-2 w-auto h-10 md:w-2/3 lg:w-1/3 rounded-full bg-green-700 text-white p-4'
         >Solicitar Cotización</a
       >
     </div>
   </div>
 </section>
+<script>
+  import {neon} from '@netlify/neon';
+  const formButton = document.querySelector('#contact form button');
+  formButton?.addEventListener('click', async(event) => {
+    event.preventDefault();
+    const sql = neon()
+    const name = (document.querySelector('input[name="name"]') as HTMLInputElement).value;
+    const email = (document.querySelector('input[name="email"]') as HTMLInputElement).value;
+    const company = (document.querySelector('input[name="company"]') as HTMLInputElement).value;
+    const message = (document.querySelector('textarea[name="message"]') as HTMLInputElement).value;
+    await sql`INSERT INTO clients (name, email, company, message) VALUES (${name}, ${email}, ${company}, ${message})`;
+  });
+</script>
